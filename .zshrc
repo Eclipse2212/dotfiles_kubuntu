@@ -35,31 +35,29 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 alias prog="cd /home/$USER/Documents/Programmes"
-alias d_data="cd /media/$USER/DATA"
 alias sql="mysql -u Eclipse2212 -p"
-alias python="python3"
+alias api="sudo apt install"
 alias apl="apt list --upgradeable"
 alias apu="sudo apt upgrade"
-alias zzz="sudo systemctl suspend"
-alias ZZZ="sudo systemctl hibernate"
-alias :q="exit"
-alias sapi="sudo apt install"
+alias apr="sudo apt remove"
 alias i3conf="vim ~/.config/i3/config"
-alias zshrc="vim ~/.zshrc"
-alias vertoffscreen="xrandr --output DP-1-1 --auto --left-of eDP-1-1 --rotate left"
-alias light="xrandr --output eDP-1-1 --brightness "
-alias cat="bat"
+alias light="xbacklight -set"
 alias df="df -h"
+alias kitten="kitty +kitten"
+
 
 toggle_touchpad() {
     if [[ $1 == "on" ]]; then
-	    xinput --enable 14
+	    xinput --enable 13
     elif [[ $1 == "off" ]]; then
-	    xinput --disable 14
+	    xinput --disable 13
     fi
 }
 
-
+zshrc() {
+	vim ~/.zshrc
+	source ~/.zshrc
+}
 
 #Prompt on new line
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -82,9 +80,8 @@ POWERLEVEL9K_BATTERY_VERBOSE=true
 
 #Prompts segments
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=( os_icon user dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( battery laravel_version background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=( laravel_version background_jobs time)
 
 #Add exa to path
-export PATH=$PATH:/opt/exa:~/.local/bin:/opt/factorio/bin/x64
-export SCRIPTS=~/Documents/Programmes/scripts
+export PATH=$PATH:~/.local/bin
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"

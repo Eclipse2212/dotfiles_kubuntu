@@ -10,9 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim'}
 Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'tyrannicaltoucan/vim-quantum'
 
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -42,10 +40,7 @@ set fileencoding=utf-8
 " Powerline tweak
 set laststatus=2
 
-set background=dark
 set termguicolors
-let g:quantum_black=1
-colorscheme quantum
 
 " vim-markdown settings
 let g:vim_markdown_folding_disabled = 1
